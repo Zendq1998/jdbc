@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>js_jsp_utf8</display-name>
+  <filter>
+    <filter-name>Set Character Encoding</filter-name>
+    <filter-class>cn.edu.ccnu.imd.study.demo.filter.SetCharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>Set Character Encoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <welcome-file-list>
+    <welcome-file>/servlets/Order.html?action=0</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <description>orderList</description>
+    <display-name>orderList</display-name>
+    <servlet-name>orderList</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.OrderListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>orderList</servlet-name>
+    <url-pattern>/servlets/OrderList.html</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description>goToAdd</description>
+    <display-name>goToAdd</display-name>
+    <servlet-name>goToAdd</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.GoToAddOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>goToAdd</servlet-name>
+    <url-pattern>/servlets/GoToAddOrder.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>addOrder</description>
+    <display-name>addOrder</display-name>
+    <servlet-name>addOrder</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.AddOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addOrder</servlet-name>
+    <url-pattern>/servlets/AddOrder.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>goToUpdate</description>
+    <display-name>goToUpdate</display-name>
+    <servlet-name>goToUpdate</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.GoToUpdateOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>goToUpdate</servlet-name>
+    <url-pattern>/servlets/GoToUpdateOrder.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>updateOrder</description>
+    <display-name>updateOrder</display-name>
+    <servlet-name>updateOrder</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.UpdateOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateOrder</servlet-name>
+    <url-pattern>/servlets/UpdateOrder.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>dealOrder</description>
+    <display-name>dealOrder</display-name>
+    <servlet-name>dealOrder</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.DealOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dealOrder</servlet-name>
+    <url-pattern>/servlets/DealOrder.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>deleteOrder</description>
+    <display-name>deleteOrder</display-name>
+    <servlet-name>deleteOrder</servlet-name>
+    <servlet-class>cn.edu.ccnu.imd.study.demo.servlet.DeleteOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteOrder</servlet-name>
+    <url-pattern>/servlets/DeleteOrder.html</url-pattern>
+  </servlet-mapping>
+</web-app>

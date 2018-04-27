@@ -18,13 +18,13 @@
     <url-pattern>/FirstServlet.html</url-pattern>
   </servlet-mapping>
   <servlet>
-       <servlet-name>MyServlet</servlet-name>
-       <servlet-class>com.mytest.test1.MyServlet</servlet-class>
-   </servlet>
-   <servlet-mapping>
-       <servlet-name>MyServlet</servlet-name>
-       <url-pattern>/MyServlet.html</url-pattern>
-   </servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <servlet-class>com.mytest.test1.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyServlet</servlet-name>
+    <url-pattern>/MyServlet.html</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>MeetList</servlet-name>
     <servlet-class>com.mytest.servlet.MeetList</servlet-class>
@@ -32,5 +32,21 @@
   <servlet-mapping>
     <servlet-name>MeetList</servlet-name>
     <url-pattern>/MeetList.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddInfo</servlet-name>
+    <servlet-class>com.mytest.servlet.AddInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddInfo</servlet-name>
+    <url-pattern>/AddInfo.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PostInfo</servlet-name>
+    <servlet-class>com.mytest.servlet.PostInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PostInfo</servlet-name>
+    <url-pattern>/PostInfo.html</url-pattern>
   </servlet-mapping>
 </web-app>

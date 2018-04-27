@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Meet List</title>
 </head>
 <body>
 <table>
@@ -45,7 +45,9 @@
 	<% }
 
 %>
-	
 </table>
+<div>
+	<a href="./AddInfo.html">增加信息</a>
+</div>
 </body>
 </html>

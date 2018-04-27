@@ -1,4 +1,0 @@
-ConnectString=jdbc:mysql://122.204.151.11:3306/demo?useUnicode=true&characterEncoding=utf-8
-UserID=test
-Password=test
-JdbcDriverName=com.mysql.jdbc.Driver

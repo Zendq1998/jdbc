@@ -30,6 +30,20 @@ public class MeetBiz {
 			System.out.println("数据库连接失败");
 		}
 		return l;
-		
+	}
+	
+	public boolean addOneInfo(MeetVo vo) {
+		DBConnection dbc = new DBConnection();
+		if(dbc.getConnect()) {
+			Connection conn = dbc.getConn();
+			MeetDao dao = new MeetDao();
+			if(dao.insert(conn, vo)) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 }

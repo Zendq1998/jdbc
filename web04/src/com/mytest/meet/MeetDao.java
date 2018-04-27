@@ -3,6 +3,8 @@ package com.mytest.meet;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MeetDao {
 	public List findbyAll(Connection _conn) {
@@ -47,5 +49,43 @@ public class MeetDao {
 			}
 		}
 		return l;
+	}
+	
+	public boolean insert(Connection _conn, MeetVo vo) {
+		StringBuffer sbSQL = new StringBuffer();
+		PreparedStatement ps = null;
+		Connection conn = null;
+		try {
+			conn = _conn;
+//			写sql
+			sbSQL.append("insert into meet (createTime,id,name,one,phone,position,station)");
+			sbSQL.append("values (?,?,?,?,?,?,?)");
+			ps = conn.prepareStatement(sbSQL.toString());
+			int nIndex = 0;
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			ps.setString(++nIndex, sdf.format(vo.getCreateTime()));
+			ps.setInt(++nIndex, vo.getId());
+			ps.setString(++nIndex, vo.getName());
+			ps.setInt(++nIndex, vo.getOne());
+			ps.setString(++nIndex, vo.getPhone());
+			ps.setString(++nIndex, vo.getPosition());
+			ps.setString(++nIndex, vo.getStation());
+//			执行sql
+			ps.execute();
+;		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			try {
+				if (ps != null) {
+					ps.close();
+					ps = null;
+					return true;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				return false;
+			}
+		}
+		return true;
 	}
 }
