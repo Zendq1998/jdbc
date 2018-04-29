@@ -9,4 +9,10 @@
 <body>
 提交中...
 </body>
+<script type="text/javascript">
+window.onload = function() {
+	console.log(window.location.href)
+	window.location.href = './MeetList.html'
+}
+</script>
 </html>

@@ -33,15 +33,15 @@ public class PostInfo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
 		MeetVo vo = getForm(request, response);
 		if(addAInfo(vo)) {
 			System.out.print("添加成功！");
 		} else {
 			System.out.print("添加失败！");
 		}
-		request.getRequestDispatcher("/MeetList.html").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/PostInfo.jsp").forward(request, response);
 //		request.getRequestDispatcher("1232131").forward(request, response);
-		
 	}
 	
 	/**
@@ -53,10 +53,10 @@ public class PostInfo extends HttpServlet {
 	}
 	
 	MeetVo getForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
 		Date createTime = new Date();
 		int id = 0;
 		int one = 0;
-		
 		String idstr = request.getParameter("id");
 		String name = request.getParameter("name");
 		String position = request.getParameter("position");
@@ -81,6 +81,7 @@ public class PostInfo extends HttpServlet {
 		vo1.setPosition(position);
 		vo1.setPhone(phone);
 		vo1.setCreateTime(createTime);
+		vo1.setStation(station);
 		vo1.setOne(one);
 		System.out.print(createTime);
 		return vo1;

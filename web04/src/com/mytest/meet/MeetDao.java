@@ -33,7 +33,6 @@ public class MeetDao {
 				meet.setStation(rs.getString("station"));
 //				把vo打包到集合l中
 				l.add(meet);
-				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -72,7 +71,32 @@ public class MeetDao {
 			ps.setString(++nIndex, vo.getStation());
 //			执行sql
 			ps.execute();
-;		} catch (Exception ex) {
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			try {
+				if (ps != null) {
+					ps.close();
+					ps = null;
+					return true;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public boolean delete(Connection _conn, int id) {
+		String sql = "delete from meet where id="+id;
+		PreparedStatement ps = null;
+		Connection conn = null;
+		try {
+			conn = _conn;
+			ps = conn.prepareStatement(sql);
+			ps.execute();
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
 			try {

@@ -38,12 +38,38 @@ public class MeetBiz {
 			Connection conn = dbc.getConn();
 			MeetDao dao = new MeetDao();
 			if(dao.insert(conn, vo)) {
+				try {
+					conn.close();
+				}catch (Exception ex){
+					ex.printStackTrace();
+				}
 				return true;
 			} else {
+				try {
+					conn.close();
+				}catch (Exception ex){
+					ex.printStackTrace();
+				}
 				return false;
 			}
 		} else {
 			return false;
+		}
+	}
+	
+	public void deleteOneInfo(int id) {
+		DBConnection dbc = new DBConnection();
+		if(dbc.getConnect()) {
+			Connection conn = dbc.getConn();
+			MeetDao dao = new MeetDao();
+			dao.delete(conn, id);
+			try {
+				conn.close();
+			}catch (Exception ex){
+				ex.printStackTrace();
+			}
+		} else {
+			System.out.println("数据库连接失败");
 		}
 	}
 }

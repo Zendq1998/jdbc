@@ -49,4 +49,12 @@
     <servlet-name>PostInfo</servlet-name>
     <url-pattern>/PostInfo.html</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>DeleteInfo</servlet-name>
+    <servlet-class>com.mytest.servlet.DeleteInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteInfo</servlet-name>
+    <url-pattern>/DeleteInfo.html</url-pattern>
+  </servlet-mapping>
 </web-app>

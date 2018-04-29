@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./style/common.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>添加信息</h1>
+	<h1 style="text-align:center">添加信息</h1>
 	<form action="PostInfo.html" method="post">
 		<table>
 			<tr>
@@ -74,18 +75,13 @@
 					</label>
 				</td>
 			</tr>
-			<tr>
-			<td colspan="2" class="cp">
-				<input type="submit" value="提交/添加">
-			</td>
-		</tr>
 		</table>
+		<div  class="cp" style="margin:0 auto;width:100px">
+			<input type="submit" value="提交/添加">
+		</div>
 	</form>
 </body>
 </html>
 
 <style>
-.cp {
-	cursor: pointer;
-}
 </style>
