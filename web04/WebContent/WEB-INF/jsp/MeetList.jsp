@@ -51,7 +51,7 @@
 		%>
 		<td><%=vo.getCreateTime() %></td>
 		<td>
-			<button class="bt info-bg cp" onclick="">修改</button>
+			<button class="bt info-bg cp" onclick="updateInfo(<%=vo.getId() %>)">修改</button>
 		</td>
 		<td>
 			<button class="bt warn-bg cp" onclick="deleteInfo(<%=vo.getId() %>)">删除</button>
@@ -67,11 +67,15 @@
 
 <script type="text/javascript">
 	function deleteInfo(id) {
-		if(confirm("确定删除？")) {
+		/* if(confirm("确定删除？")) {
 			window.location.href = './DeleteInfo.html?id=' + id;
 		} else {
 			return 0;
-		}
+		} */
+		window.location.href = './DeleteInfo.html?id=' + id;
+	}
+	function updateInfo(id) {
+		window.location.href = './UpdateInfo.html?id=' + id;
 	}
 </script>
 </body>

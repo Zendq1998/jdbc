@@ -5,11 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./style/common.css">
+<link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="jqueryui/style.css">
 <title>Insert title here</title>
 </head>
 <body>
 	<h1 style="text-align:center">添加信息</h1>
-	<form action="PostInfo.html" method="post">
+	<form action="PostInfo.html" method="post" class="add-form">
 		<table>
 			<tr>
 				<td>id：</td>
@@ -63,6 +67,10 @@
 				</td>
 			</tr>
 			<tr>
+				<td>到站日</td>
+				<td><input type="text" id="datepicker" size="30" name="createTime"></td>
+			</tr>
+			<tr>
 				<td>是否单住</td>
 				<td>
 					<label class="cp">
@@ -81,7 +89,17 @@
 		</div>
 	</form>
 </body>
+<script type="text/javascript">
+$(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+  });
+</script>
 </html>
 
 <style>
+.add-form {
+	width: 50%;
+	margin: 0 auto;
+}
 </style>

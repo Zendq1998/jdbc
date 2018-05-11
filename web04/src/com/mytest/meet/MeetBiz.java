@@ -31,7 +31,23 @@ public class MeetBiz {
 		}
 		return l;
 	}
-	
+	public MeetVo selectVo(int id) {
+		MeetVo vo = new MeetVo();
+		DBConnection dbc = new DBConnection();
+		if(dbc.getConnect()) {
+			Connection conn = dbc.getConn();
+			MeetDao dao = new MeetDao();
+			dao.select(conn, id, vo);
+			try {
+				conn.close();
+			}catch (Exception ex){
+				ex.printStackTrace();
+			}
+		} else {
+			System.out.println("数据库连接失败");
+		}
+		return vo;
+	}
 	public boolean addOneInfo(MeetVo vo) {
 		DBConnection dbc = new DBConnection();
 		if(dbc.getConnect()) {
@@ -56,7 +72,30 @@ public class MeetBiz {
 			return false;
 		}
 	}
-	
+	public boolean updateOneInfo(MeetVo vo) {
+		DBConnection dbc = new DBConnection();
+		if(dbc.getConnect()) {
+			Connection conn = dbc.getConn();
+			MeetDao dao = new MeetDao();
+			if(dao.update(conn, vo)) {
+				try {
+					conn.close();
+				}catch (Exception ex){
+					ex.printStackTrace();
+				}
+				return true;
+			} else {
+				try {
+					conn.close();
+				}catch (Exception ex){
+					ex.printStackTrace();
+				}
+				return false;
+			}
+		} else {
+			return false;
+		}
+	}
 	public void deleteOneInfo(int id) {
 		DBConnection dbc = new DBConnection();
 		if(dbc.getConnect()) {

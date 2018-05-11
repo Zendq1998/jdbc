@@ -1,10 +1,9 @@
 package com.mytest.servlet;
 
 import java.io.IOException;
-//import java.sql.Date;
-import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -16,16 +15,16 @@ import com.mytest.meet.MeetBiz;
 import com.mytest.meet.MeetVo;
 
 /**
- * Servlet implementation class PostInfo
+ * Servlet implementation class ChangeAll
  */
-@WebServlet("/PostInfo")
-public class PostInfo extends HttpServlet {
+@WebServlet("/ChangeAll")
+public class ChangeAll extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PostInfo() {
+    public ChangeAll() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,18 +33,15 @@ public class PostInfo extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
 		MeetVo vo = getForm(request, response);
-		if(addAInfo(vo)) {
-			System.out.print("添加成功！");
+		if (updateInfo(vo)) {
+			System.out.println("修改成功！");
 		} else {
-			System.out.print("添加失败！");
+			System.out.println("修改失败！");
 		}
 		request.getRequestDispatcher("/WEB-INF/jsp/PostInfo.jsp").forward(request, response);
-//		request.getRequestDispatcher("1232131").forward(request, response);
 	}
-	
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -102,15 +98,13 @@ public class PostInfo extends HttpServlet {
 		return vo1;
 	}
 	
-	boolean addAInfo(MeetVo vo) {
+	boolean updateInfo(MeetVo vo) {
 		MeetBiz mb = new MeetBiz();
-		if(mb.addOneInfo(vo)) {
+		if(mb.updateOneInfo(vo)) {
 			return true;
 		} else {
 			return false;
 		}
 	}
- 
-	
 
 }

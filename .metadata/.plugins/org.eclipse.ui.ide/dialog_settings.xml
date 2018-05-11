@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/Users/a1/eclipse-workspace/java-web/SimpleServletDemo 2 上午10.44.08"/>
 		<item value="/Users/a1/Desktop/SimpleServletDemo"/>
 		<item value="/Applications/tomcat7/webapps/SimpleServletDemo"/>
 	</list>

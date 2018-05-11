@@ -57,4 +57,20 @@
     <servlet-name>DeleteInfo</servlet-name>
     <url-pattern>/DeleteInfo.html</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UpdateInfo</servlet-name>
+    <servlet-class>com.mytest.servlet.UpdateInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateInfo</servlet-name>
+    <url-pattern>/UpdateInfo.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ChangeAll</servlet-name>
+    <servlet-class>com.mytest.servlet.ChangeAll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChangeAll</servlet-name>
+    <url-pattern>/ChangeAll.html</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -8,4 +8,10 @@
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.Out"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="com.mytest.meet.MeetBiz"/>
+    <fullyQualifiedTypeName name="com.mytest.meet.MeetVo"/>
 </qualifiedTypeNameHistroy>

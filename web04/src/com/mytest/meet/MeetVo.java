@@ -1,5 +1,6 @@
 package com.mytest.meet; //映射一条数据。vo是跟数据库做映射关系的。
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MeetVo {
@@ -13,6 +14,11 @@ public class MeetVo {
 	
 	public Date getCreateTime() {
 		return createTime;
+	}
+	public String getCteateTimestr() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String createTimestr = sdf.format(createTime);
+		return createTimestr;
 	}
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
