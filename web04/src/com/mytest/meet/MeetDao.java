@@ -3,13 +3,15 @@ package com.mytest.meet;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Vector;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MeetDao {
 	public List findbyAll(Connection _conn) {
 //		把sql写出来
-		String sql = "select * from meet";
+		String sql = "select * from meet where 1=1 ";
 //		准备sql工作
 		PreparedStatement ps = null;
 		List l = null;
@@ -49,7 +51,46 @@ public class MeetDao {
 		}
 		return l;
 	}
-	
+	public List findAll2(Connection _conn, String strSql, int offset, int pageNum) {
+//		Vector v = new Vector();
+		List l = new ArrayList();
+		StringBuffer sbSQL = new StringBuffer();
+		PreparedStatement ps = null;
+		Connection conn = null;
+		ResultSet rs = null;
+		try {
+			conn = _conn;
+			sbSQL.append("select * from meet where ");
+			sbSQL.append(strSql);
+			sbSQL.append(" limit " + offset + "," + pageNum);
+			ps = conn.prepareStatement(sbSQL.toString());
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				MeetVo meet = new MeetVo();
+				meet.setCreateTime(rs.getDate("createTime"));
+				meet.setId(rs.getInt("id"));
+				meet.setName(rs.getString("name"));
+				meet.setOne(rs.getInt("one"));
+				meet.setPhone(rs.getString("phone"));
+				meet.setPosition(rs.getString("position"));
+				meet.setStation(rs.getString("station"));
+				l.add(meet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+//				关闭ps
+				if(ps != null) {
+					ps.close();
+					ps = null;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		return l;
+	}
 	public boolean insert(Connection _conn, MeetVo vo) {
 		StringBuffer sbSQL = new StringBuffer();
 		PreparedStatement ps = null;
@@ -177,5 +218,36 @@ public class MeetDao {
 				ex.printStackTrace();
 			}
 		}
+	}
+	public Long count(Connection _conn, String sql) {
+		Long num = 0l;
+		StringBuffer sbSQL = null;
+		PreparedStatement ps = null;
+		Connection conn = null;
+		ResultSet rs = null;
+		try {
+			conn = _conn;
+			sbSQL = new StringBuffer();
+			sbSQL.append("select count(*) as num from meet where ");
+			sbSQL.append(sql);
+			ps = conn.prepareStatement(sbSQL.toString());
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				num = rs.getLong("num");
+			}
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+//				关闭ps
+				if(ps != null) {
+					ps.close();
+					ps = null;
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		}
+		return num;
 	}
 }

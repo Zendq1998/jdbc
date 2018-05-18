@@ -3,7 +3,9 @@ package com.mytest.meet;
 import com.mytest.common.*;
 
 import java.sql.Connection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class MeetBiz {
@@ -30,6 +32,39 @@ public class MeetBiz {
 			System.out.println("数据库连接失败");
 		}
 		return l;
+	}
+	public Map getAllMeets2(String sql, int pageNum, int page) {
+//		pageNum 每页记录数
+//		page 当前页码
+		Map<String, Object> map = new HashMap();
+		DBConnection dbc = new DBConnection();
+		if(dbc.getConnect()) {
+			Connection conn = dbc.getConn();
+			try {
+				MeetDao dao = new MeetDao();
+				Long count = dao.count(conn,sql);
+//				获得总数count
+				if(count>0) {
+					int num = Integer.parseInt(count+"");
+//					总数
+					SplitPageUtil sp = new SplitPageUtil( num, pageNum, page);
+					List _l=dao.findAll2(conn,sql,sp.getOffset(),sp.getPageNum());
+					map.put("sp", sp);
+					map.put("data", _l);
+				}
+			}catch (Exception ex){
+				ex.printStackTrace();
+			}
+			try {
+				conn.close();
+			}catch (Exception ex){
+				ex.printStackTrace();
+			}
+		}
+		else {
+			System.out.println("数据库连接失败");
+		}
+		return map;
 	}
 	public MeetVo selectVo(int id) {
 		MeetVo vo = new MeetVo();

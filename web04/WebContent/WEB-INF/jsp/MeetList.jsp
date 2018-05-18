@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.mytest.meet.MeetVo" %>
-<%
-	List l = (List)request.getAttribute("meetList");
-%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,45 +24,52 @@
 		<th>修改</th>
 		<th>删除</th>
 	</tr>
-<%
-	if(l.size() == 0) {%>
+	<c:forEach items="${meetMap.data}" var="vo">
+		<tr>
+			<td>${vo.id}</td>
+			<td>${vo.name}</td>
+			<td>${vo.phone}</td>
+			<td>${vo.position}</td>
+			<td>${vo.station}</td>
+			<c:if test="${vo.one==1}">
+				<td>是</td>
+			</c:if>
+			<c:if test="${vo.one==0}">
+				<td>否</td>
+			</c:if>
+			<td>${vo.getCreateTime()}</td>
+			<td>
+			<button class="bt info-bg cp" onclick="updateInfo(${vo.id})">修改</button>
+		</td>
+		<td>
+			<button class="bt warn-bg cp" onclick="deleteInfo(${vo.id})">删除</button>
+		</td>
+		</tr>
+	</c:forEach>
+	<c:if test="${meetList.size() == 0}">
 		<tr>
 			<td colspan="9" class="cent">暂无信息！</td>
 		</tr>
-	<%} 
-	for(int i=0;l!=null && i<l.size();i++) {
-		MeetVo vo = (MeetVo)l.get(i);
-		%>
-		<tr>
-		<td><%=vo.getId() %></td>
-		<td><%=vo.getName() %></td>
-		<td><%=vo.getPhone() %></td>
-		<td><%=vo.getPosition() %></td>
-		<td><%=vo.getStation() %></td>
-		<%
-			if(vo.getOne() == 1) {
-				
-				%><td>是</td><%
-			}
-			else {
-				%><td>否</td><%
-			}
-		%>
-		<td><%=vo.getCreateTime() %></td>
-		<td>
-			<button class="bt info-bg cp" onclick="updateInfo(<%=vo.getId() %>)">修改</button>
-		</td>
-		<td>
-			<button class="bt warn-bg cp" onclick="deleteInfo(<%=vo.getId() %>)">删除</button>
-		</td>
-		</tr>
-	<% }
-
-%>
+	</c:if>
 </table>
+
 <div class="add-info">
 	<a href="./AddInfo.html">增加信息</a>
 </div>
+
+<c:if test="${meetMap.sp != null}">
+<tr>
+	<td colspan="6">
+		<span>共${meetMap.sp.count}条记录</span>
+		<span>共${meetMap.sp.totalpage}页</span>
+		<span>第${meetMap.sp.page}页</span>
+		<span><a href="./MeetList.html?page=${meetMap.sp.firstPage}">首页</a></span>
+		<span><a href="./MeetList.html?page=${meetMap.sp.prePage}">上一页</a></span>
+		<span><a href="./MeetList.html?page=${meetMap.sp.nextPage}">下一页</a></span>
+		<span><a href="./MeetList.html?page=${meetMap.sp.lastPage}">尾页</a></span>
+	</td>
+</tr>
+</c:if>
 
 <script type="text/javascript">
 	function deleteInfo(id) {

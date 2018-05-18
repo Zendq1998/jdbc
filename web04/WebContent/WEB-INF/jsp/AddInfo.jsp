@@ -39,12 +39,6 @@
 					<input type="text" name="phone">
 				</td>
 			</tr>
-			<!-- <tr>
-				<td>报名时间：</td>
-				<td>
-					<input type="text" name="createTime">
-				</td>
-			</tr> -->
 			<tr>
 				<td>到达站点</td>
 				<td>

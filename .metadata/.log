@@ -8391,3 +8391,169 @@ java.net.UnknownHostException: download.eclipse.org
 
 !ENTRY org.eclipse.jface.text 2 0 2018-05-11 19:33:54.551
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-11 21:23:03.021
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-11 21:23:03.023
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-05-12 19:18:30.853 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-12 19:18:41.669
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-12 19:18:41.670
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.350
+!MESSAGE System property http.proxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.350
+!MESSAGE System property http.proxyPort has been set to 1087 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.351
+!MESSAGE System property http.nonProxyHosts has been set to 127.0.0.1|localhost|*.localhost by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.352
+!MESSAGE System property https.proxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.353
+!MESSAGE System property https.proxyPort has been set to 1087 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.353
+!MESSAGE System property socksProxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-12 19:18:42.353
+!MESSAGE System property socksProxyPort has been set to 1086 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-12 19:18:50.260
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:13.155
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:13.163
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:13.205
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:13.206
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:39.122
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 19:29:39.122
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 20:35:06.024
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 20:35:06.026
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 20:40:07.784
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-12 20:40:07.786
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.recommenders.rcp 4 18 2018-05-12 21:33:45.446
+!MESSAGE Failed to resolve selection in ‘=web04/src<com.mytest.common{SplitPageUtil.java’ at offset 325.
+!STACK 1
+Java Model Exception: Java Model Status [Index out of bounds]
+	at org.eclipse.jdt.internal.core.Openable.codeSelect(Openable.java:158)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:378)
+	at org.eclipse.jdt.internal.core.CompilationUnit.codeSelect(CompilationUnit.java:372)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:138)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:514)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:299)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+	at java.base/java.lang.Thread.run(Thread.java:844)
+!SUBENTRY 1 org.eclipse.jdt.core 4 980 2018-05-12 21:33:45.447
+!MESSAGE Index out of bounds
+!SESSION 2018-05-14 09:55:50.018 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-14 09:55:56.863
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-14 09:55:56.866
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.512
+!MESSAGE System property http.proxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.513
+!MESSAGE System property http.proxyPort has been set to 1087 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.513
+!MESSAGE System property http.nonProxyHosts has been set to 127.0.0.1|localhost|*.localhost by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.514
+!MESSAGE System property https.proxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.515
+!MESSAGE System property https.proxyPort has been set to 1087 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.515
+!MESSAGE System property socksProxyHost has been set to 127.0.0.1 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-14 09:55:57.516
+!MESSAGE System property socksProxyPort has been set to 1086 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-14 09:56:05.002
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl
+!SESSION 2018-05-18 15:15:39.288 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180301-0715
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/a1/.eclipse_keyring
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-18 15:16:22.919
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.poll.PollNewsFeedsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-18 15:16:22.922
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.read.ReadNewsItemsHandler
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2018-05-18 15:16:33.453
+!MESSAGE Unable to retrieve the bundle from the URI: bundleclass://org.eclipse.recommenders.news.rcp/org.eclipse.recommenders.internal.news.rcp.toolbar.NewsToolControl
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 15:49:28.651
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 15:49:28.660
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 16:31:23.875
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 16:31:23.877
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 16:31:23.915
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-05-18 16:31:23.915
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

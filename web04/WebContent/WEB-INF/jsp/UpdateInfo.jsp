@@ -82,7 +82,7 @@
 			</tr>
 			<tr>
 				<td>到站日期</td>
-				<td><input type="text" id="datepicker" name="createTime" value=<%=vo.getCreateTime() %> placeholder="<%=vo.getCreateTime() %>"></td>
+				<td><input type="text" id="datepicker" name="createTime" value="<%=vo.getCreateTime() %>"></td>
 			</tr>
 			<tr>
 				<td>是否单住</td>
@@ -116,6 +116,7 @@
 $(function() {
     $( "#datepicker" ).datepicker();
     $( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
+    $( "#datepicker" ).datepicker( "setDate", "<%=vo.getCreateTime() %>" );
   });
 </script>
 </html>

@@ -2,6 +2,7 @@ package com.mytest.servlet;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,11 +31,15 @@ public class MeetList extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		 TODO Auto-generated method stub
+		int page = request.getParameter("page")==null?1:Integer.parseInt(request.getParameter("page"));
+		String sql = "1=1";
 		MeetBiz biz = new MeetBiz();
 //		用biz获取我们要的数据
 		List l = biz.getAllMeets();
+		Map map = biz.getAllMeets2(sql,3,page);
 //		把数据发到jsp
 		request.setAttribute("meetList",l);
+		request.setAttribute("meetMap", map);
 		request.getRequestDispatcher("/WEB-INF/jsp/MeetList.jsp").forward(request,response);
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
